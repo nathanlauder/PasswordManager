@@ -6,7 +6,7 @@
 # I am also using this project as an introduction to hash tables in python
 # the main function will be an infinite loop where it can only be hit by pressing "q" for quit
 from random import randrange
-passs =  {}
+combos =  {}
 
 def main():
     answer = ""
@@ -16,19 +16,26 @@ def main():
         
         # put a new password into the map
         if answer == "np":
-            blahhhh
+            service = input("What is the service?  ")
+            passForService = generatePassword()
+            insertPair(service, passForService)
 
         # find a password already in the map
         elif answer == "fp":
             stuffff
 #main()
 # def addPass(service, password):
-    
+
+def insertPair(service, password):
+    combos[service] = password
+
+def showCombos():
+    print(combos)
 
 def generatePassword():
     possibleChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*"
     password = ""
     for i in range(12):
         password += possibleChars[randrange(68)]
-    print (password)
+    return password
 generatePassword()
