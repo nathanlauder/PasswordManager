@@ -12,7 +12,7 @@ combos = {}
 def insertPair(service, password):
     combos[service] = password
 
-# generates a random password from lowercase, caps, numbers and some symbols
+# generates a random password from the general allowed characters for passwords
 def generatePassword():
     possibleChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*"
     password = ""
