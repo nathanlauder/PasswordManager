@@ -48,7 +48,7 @@ def main():
             existingService = input("Which service do you need to find the password for? ")
             print(findPassword(existingService))
 
-        # if the command isn't known or there is a typo
+        # start the loop over if the command isn't known or there is a typo
         else:
             print("command not recognized, please try again")
 
