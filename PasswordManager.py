@@ -20,13 +20,11 @@ def generatePassword():
 #generatePassword()
 
 def findPassword(service):
-    str(service)
     return combos[service]
 
 # prints all the password pairs
 def showCombos():
     print(combos)
-
 
 def main():
     answer = ""
@@ -46,3 +44,6 @@ def main():
             print(findPassword(existingService))
 
 main()
+
+if __name__ == "__main__":
+    main()
