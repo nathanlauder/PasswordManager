@@ -37,7 +37,7 @@ def main():
         print("\nq: quit" + "\n" + "np: new password" + "\n" + "fp: find password")
         answer = input("What action do you wanna perform\n")
         
-        # put a new password into the map
+        # put a new password into the map with new service
         if answer == "np":
             newService = input("What is the service?  ")
             passForService = generatePassword()
