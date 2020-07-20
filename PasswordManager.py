@@ -43,7 +43,7 @@ def main():
             passForService = generatePassword()
             insertPair(newService, passForService)
             
-        # find a password already in the map
+        # find a password already in the dictionary
         elif answer == "fp":
             existingService = input("Which service do you need to find the password for? ")
             print(findPassword(existingService))
