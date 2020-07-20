@@ -26,8 +26,8 @@ def findPassword(service):
 
 # prints all the password pairs
 # can be used if implemented
-def showCombos():
-    print(combos)
+#def showCombos():
+ #   print(combos)
 
 # main function will have a sentinel loop with possible commands to add 
 # a service and password, find the password for a service, or quit the loop
