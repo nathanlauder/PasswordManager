@@ -13,10 +13,10 @@ def insertPair(service, password):
     combos[service] = password
 
 # generates a random password from the general allowed characters for passwords
-def generatePassword():
+def generatePassword(passLen):
     possibleChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%&*"
     password = ""
-    for i in range(12):
+    for i in range(passLen):
         password += possibleChars[randrange(68)]
     return password
 
@@ -25,22 +25,26 @@ def findPassword(service):
     return combos[service]
 
 # prints all the password pairs
-# can be used if implemented
-#def showCombos():
- #   print(combos)
+def showAll():
+    keyList = combos.items()
+    for pair in keyList:
+       print(pair[0]+"->"+pair[1])
 
 # main function will have a sentinel loop with possible commands to add 
 # a service and password, find the password for a service, or quit the loop
 def main():
     answer = ""
-    while answer != "q":
+    while True:
         print("\nq: quit" + "\n" + "np: new password" + "\n" + "fp: find password")
         answer = input("What action do you wanna perform\n")
         
+        if answer == 'q':
+            break
         # put a new password into the map with new service
-        if answer == "np":
+        elif answer == "np":
             newService = input("What is the service?  ")
-            passForService = generatePassword()
+            passLen = int(input("How many characters for the service? "))
+            passForService = generatePassword(passLen)
             insertPair(newService, passForService)
             
         # find a password already in the dictionary
@@ -48,6 +52,8 @@ def main():
             existingService = input("Which service do you need to find the password for? ")
             print(findPassword(existingService))
 
+        elif answer == "show":
+            showAll()
         # start the loop over if the command isn't known or there is a typo
         else:
             print("command not recognized, please try again")
