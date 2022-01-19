@@ -35,7 +35,7 @@ def showAll():
 def main():
     answer = ""
     while True:
-        print("\nq: quit" + "\n" + "np: new password" + "\n" + "fp: find password")
+        print("\nq: quit" + "\n" + "np: new password" + "\n" + "fp: find password" + "\nshow: show all password combos")
         answer = input("What action do you wanna perform\n")
         
         if answer == 'q':
@@ -57,8 +57,6 @@ def main():
         # start the loop over if the command isn't known or there is a typo
         else:
             print("command not recognized, please try again")
-
-main()
 
 if __name__ == "__main__":
     main()
