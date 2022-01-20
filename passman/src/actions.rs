@@ -1,15 +1,15 @@
-pub fn create(service:String) {
+pub fn create(service: &str) {
     println!("Creating: {:?}", service);
 }
 
-pub fn get(service:String) {
+pub fn get(service: &str) {
     println!("Getting: {:?}", service);
 }
 
-pub fn update(service:String) {
+pub fn update(service: &str) {
     println!("Updating: {:?}", service);
 }
 
-pub fn delete(service:String) {
+pub fn delete(service: &str) {
     println!("Deleting: {:?}", service);
 }
