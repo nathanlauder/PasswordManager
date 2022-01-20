@@ -1,5 +1,5 @@
 [package]
-name = "PassMan"
+name = "pass_man"
 version = "0.1.0"
 authors = ["nathanlauder <laudern42@gmail.com>"]
 edition = "2018"
